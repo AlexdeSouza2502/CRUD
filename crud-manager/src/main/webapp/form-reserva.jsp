@@ -29,13 +29,13 @@
 						value="${reserva.getPessoa()}">
 				</div>
 
-				<div class="form-group col-md-6">
-					<label for="userId">Usuário</label> 
-					<select id="userId"
-						class="form-control selectpicker" name="userId" required
-						oninvalid="this.setCustomValidity('Por favor, selecione um usuário.')"
+				<div class="form-group col-md-6"> 
+					<label for="user">Usuário</label>
+					 <select id="user"
+						class="form-control selectpicker" name="user" required
+						oninvalid="this.setCustomValidity('Por favor, informe o usuário.')"
 						oninput="setCustomValidity('')">
-						<option value="" ${not empty reserva ? "" : 'selected'}>Selecione um usuário
+						<option value="" ${not empty reserva ? "" : 'selected'}>Selecione um usuario
 						</option>
 						<c:forEach var="user" items="${users}">
 							<option value="${user.getId()}" ${reserva.getUser().getId() == user.getId() ? 'selected' : ''}>
